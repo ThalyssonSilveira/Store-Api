@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>    
+    <ImplicitUsings>enable</ImplicitUsings>    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Store.Platform.Business.Entity/Store.Platform.Business.Entity.csproj" />
+    <ProjectReference Include="../Store.Platform.Business.Repository/Store.Platform.Business.Repository.csproj" />
+    <ProjectReference Include="../Factory/Store.Platform.Business.Factory.Repository/Store.Platform.Business.Factory.Repository.csproj" />
+    <ProjectReference Include="../../Common/Store.Platform.Common.Entity/Store.Platform.Common.Entity.csproj" />
+  </ItemGroup>
+
+</Project>
