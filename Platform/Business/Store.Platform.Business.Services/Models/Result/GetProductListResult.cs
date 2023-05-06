@@ -1,4 +1,4 @@
-using Store.Platform.Business.Entity;
+using Store.Platform.Business.Entity.Models;
 
 namespace Store.Platform.Business.Services.Models.Result;
 

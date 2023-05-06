@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Store.Api.Application.Filters;
-using Store.Platform.Business.Infrastructure.DependencyInjection.Extensions;
 using Store.Platform.Common.Entity;
+using Store.Platform.Business.Infrastructure.DependencyInjection.Extensions;
+using Store.Platform.Auth.Infrastructure.DependencyInjection.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -65,6 +66,7 @@ builder.Services.AddSwaggerGen(c =>
         });
     });
 
+builder.Services.AddScopedAuthFactories();
 builder.Services.AddScopedBusinessFactories();
 
 var app = builder.Build();

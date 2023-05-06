@@ -13,11 +13,15 @@
 
   <ItemGroup>
     <ProjectReference Include="../Store.API.Entity/Store.API.Entity.csproj" />    
-    <ProjectReference Include="../../Platform/Business/Store.Platform.Business.Services/Store.Platform.Business.Services.csproj" />    
     <ProjectReference Include="../../Platform/Common/Store.Platform.Common.Entity/Store.Platform.Common.Entity.csproj" />    
+    <ProjectReference Include="../../Platform/Business/Store.Platform.Business.Services/Store.Platform.Business.Services.csproj" />    
     <ProjectReference Include="../../Platform/Business/Store.Platform.Business.Common/Store.Platform.Business.Common.csproj" />
     <ProjectReference Include="../../Platform/Business/Factory/Store.Platform.Business.Factory.Services/Store.Platform.Business.Factory.Services.csproj" />
     <ProjectReference Include="../../Platform/Business/Store.Platform.Business.Infrastructure/Store.Platform.Business.Infrastructure.csproj" />
+    <ProjectReference Include="../../Platform/Auth/Store.Platform.Auth.Services/Store.Platform.Auth.Services.csproj" />    
+    <ProjectReference Include="../../Platform/Auth/Store.Platform.Auth.Common/Store.Platform.Auth.Common.csproj" />
+    <ProjectReference Include="../../Platform/Auth/Factory/Store.Platform.Auth.Factory.Services/Store.Platform.Auth.Factory.Services.csproj" />
+    <ProjectReference Include="../../Platform/Auth/Store.Platform.Auth.Infrastructure/Store.Platform.Auth.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

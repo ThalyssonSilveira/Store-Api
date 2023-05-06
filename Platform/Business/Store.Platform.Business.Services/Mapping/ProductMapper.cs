@@ -1,5 +1,5 @@
 
-using Store.Platform.Business.Entity;
+using Store.Platform.Business.Entity.Models;
 using Store.Platform.Business.Services.Models.Result;
 
 namespace Store.Platform.Business.Service.Mapping;

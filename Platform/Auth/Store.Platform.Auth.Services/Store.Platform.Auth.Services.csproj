@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>    
+    <ImplicitUsings>enable</ImplicitUsings>    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Store.Platform.Auth.Entity/Store.Platform.Auth.Entity.csproj" />
+    <ProjectReference Include="../Store.Platform.Auth.Repository/Store.Platform.Auth.Repository.csproj" />
+    <ProjectReference Include="../Factory/Store.Platform.Auth.Factory.Repository/Store.Platform.Auth.Factory.Repository.csproj" />
+    <ProjectReference Include="../../Common/Store.Platform.Common.Entity/Store.Platform.Common.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

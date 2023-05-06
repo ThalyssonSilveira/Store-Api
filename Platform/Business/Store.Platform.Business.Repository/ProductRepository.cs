@@ -1,6 +1,6 @@
 using Dapper;
 using Microsoft.Data.SqlClient;
-using Store.Platform.Business.Entity;
+using Store.Platform.Business.Entity.Models;
 using Store.Platform.Business.Repository.Interfaces;
 using Store.Platform.Common.Entity;
 
@@ -40,7 +40,7 @@ public class ProductRepository : IProductRepository
     public void DeleteProduct(long productId)
     {
         using var connection = new SqlConnection(_settings.ConnectionStrings["DefaultConnection"]);
-        connection.Execute("DELETE FROM Product WHERE ProductId = @ProductId", new { Id = productId });
+        connection.Execute("DELETE FROM Product WHERE ProductId = @ProductId", new { ProductId = productId });
     }
 
     public void UpdateProduct(Product product)

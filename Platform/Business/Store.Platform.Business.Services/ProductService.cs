@@ -1,4 +1,4 @@
-using Store.Platform.Business.Entity;
+using Store.Platform.Business.Entity.Models;
 using Store.Platform.Business.Factory.Repository.Interfaces;
 using Store.Platform.Business.Service.Interfaces;
 using Store.Platform.Business.Service.Mapping;

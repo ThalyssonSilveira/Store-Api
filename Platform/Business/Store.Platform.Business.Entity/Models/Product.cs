@@ -1,4 +1,4 @@
-namespace Store.Platform.Business.Entity;
+namespace Store.Platform.Business.Entity.Models;
 
 public class Product
 {
