@@ -44,7 +44,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpPost()]
-    // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public IActionResult POST([FromBody] SaveNewProductRequest saveNewProductRequest)
     {
         BusinessModelRequest.SaveNewProductRequest businessModelRequest = _productMapper.Map(saveNewProductRequest);
@@ -53,7 +53,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpPut()]
-    // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public IActionResult PUT([FromBody] UpdateProductRequest updateProductRequest)
     {
         BusinessModelRequest.UpdateProductRequest businessModelRequest = _productMapper.Map(updateProductRequest);
@@ -62,7 +62,7 @@ public class ProductController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public IActionResult DELETE(long id)
     {
         _productServiceFactory.Create().DeleteProduct(id);

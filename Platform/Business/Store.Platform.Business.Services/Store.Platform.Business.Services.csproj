@@ -8,8 +8,8 @@
   <ItemGroup>
     <ProjectReference Include="../Store.Platform.Business.Entity/Store.Platform.Business.Entity.csproj" />
     <ProjectReference Include="../Store.Platform.Business.Repository/Store.Platform.Business.Repository.csproj" />
+    <ProjectReference Include="../../Business/Store.Platform.Business.Common/Store.Platform.Business.Common.csproj" />
     <ProjectReference Include="../Factory/Store.Platform.Business.Factory.Repository/Store.Platform.Business.Factory.Repository.csproj" />
-    <ProjectReference Include="../../Common/Store.Platform.Common.Entity/Store.Platform.Common.Entity.csproj" />
   </ItemGroup>
 
 </Project>

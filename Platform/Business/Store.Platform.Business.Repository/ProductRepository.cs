@@ -18,9 +18,17 @@ public class ProductRepository : IProductRepository
     public Product GetById(long productId)
     {
         using var connection = new SqlConnection(_settings.ConnectionStrings["DefaultConnection"]);
-        Product getProductById = connection.QueryFirst<Product>("SELECT * FROM Product WHERE ProductId = @Id", new { Id = productId });
 
-        return getProductById;
+        try
+        {
+            Product getProductById = connection.QueryFirst<Product>("SELECT * FROM Product WHERE ProductId = @Id", new { Id = productId });
+
+            return getProductById;
+        }
+        catch
+        {
+            return null;
+        }
     }
 
     public List<Product> GetAll()

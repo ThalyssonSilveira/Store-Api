@@ -6,6 +6,6 @@ namespace Store.Platform.Auth.Service.Interfaces
 {
     public interface IAuthService
     {
-
+        public AuthenticateResult Authenticate(AuthenticateRequest authenticateRequest);
     }
 }

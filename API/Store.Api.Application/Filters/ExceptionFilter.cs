@@ -2,6 +2,7 @@ using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Store.Api.Application.Models.Response;
+using Store.Platform.Auth.Common;
 using Store.Platform.Business.Common;
 
 namespace Store.Api.Application.Filters;
@@ -16,6 +17,7 @@ public class ExceptionFilter : IExceptionFilter
         switch (context.Exception)
         {
             case BusinessException:
+            case AuthException:
                 httpStatusCode = HttpStatusCode.BadRequest;
                 response.Message = context.Exception.Message;
                 break;

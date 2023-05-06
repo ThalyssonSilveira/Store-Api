@@ -9,6 +9,7 @@
     <ProjectReference Include="../Store.Platform.Auth.Entity/Store.Platform.Auth.Entity.csproj" />
     <ProjectReference Include="../Store.Platform.Auth.Repository/Store.Platform.Auth.Repository.csproj" />
     <ProjectReference Include="../Factory/Store.Platform.Auth.Factory.Repository/Store.Platform.Auth.Factory.Repository.csproj" />
+    <ProjectReference Include="../../Auth/Store.Platform.Auth.Common/Store.Platform.Auth.Common.csproj" />
     <ProjectReference Include="../../Common/Store.Platform.Common.Entity/Store.Platform.Common.Entity.csproj" />
   </ItemGroup>
 

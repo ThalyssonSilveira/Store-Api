@@ -1,3 +1,4 @@
+using Store.Platform.Business.Common;
 using Store.Platform.Business.Entity.Models;
 using Store.Platform.Business.Factory.Repository.Interfaces;
 using Store.Platform.Business.Service.Interfaces;
@@ -23,9 +24,12 @@ public class ProductService : IProductService
 
     public GetProductByIdResult GetById(long productId)
     {
-        Product getProdcut = _productRepositoryFactory.Create().GetById(productId);
+        Product product = _productRepositoryFactory.Create().GetById(productId);
 
-        GetProductByIdResult productResult = _productMapper.Map(getProdcut);
+        if (product == null)
+            throw new BusinessException("Produto não encontrado");
+
+        GetProductByIdResult productResult = _productMapper.Map(product);
 
         return productResult;
     }

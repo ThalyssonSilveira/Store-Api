@@ -15,4 +15,19 @@ public class UserRepository : IUserRepository
         _settings = settings;
     }
 
+    public User GetByLogin(string login)
+    {
+        using var connection = new SqlConnection(_settings.ConnectionStrings["DefaultConnection"]);
+        try
+        {
+            User user = connection.QueryFirst<User>("SELECT * FROM [User] WHERE Login = @Login", new { Login = login });
+
+            return user;
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
 }
