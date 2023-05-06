@@ -30,4 +30,10 @@ public class UserRepository : IUserRepository
         }
     }
 
+    public void SaveNewUser(User user)
+    {
+        using var connection = new SqlConnection(_settings.ConnectionStrings["DefaultConnection"]);
+        connection.Execute("INSERT INTO [User] ([Login], [Password]) VALUES (@Login, @Password)", user);
+    }
+
 }
